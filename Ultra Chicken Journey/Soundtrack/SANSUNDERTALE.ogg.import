@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SANSUNDERTALE.ogg-a5e6a045a0ddb65bb2e028fe041b1929.oggstr"
+
+[deps]
+
+source_file="res://Soundtrack/SANSUNDERTALE.ogg"
+dest_files=[ "res://.import/SANSUNDERTALE.ogg-a5e6a045a0ddb65bb2e028fe041b1929.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

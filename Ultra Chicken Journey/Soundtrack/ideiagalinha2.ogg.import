@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ideiagalinha2.ogg-28403701acebc48c5fd93ad8f501cdfb.oggstr"
+
+[deps]
+
+source_file="res://Soundtrack/ideiagalinha2.ogg"
+dest_files=[ "res://.import/ideiagalinha2.ogg-28403701acebc48c5fd93ad8f501cdfb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
