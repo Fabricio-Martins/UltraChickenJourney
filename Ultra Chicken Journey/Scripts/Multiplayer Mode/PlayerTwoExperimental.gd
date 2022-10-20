@@ -58,7 +58,7 @@ func _on_Player2_body_entered(body):
 		return
 		
 	if body.name == "victory":
-		emit_signal("scored2")
+		emit_signal("scored")
 		start_position()
 	else:
 		colliding = true
@@ -72,5 +72,5 @@ func paused():
 	start_position()
 
 func start_position():
-	position.x = 400
+	position.x = 800
 	position.y = 696

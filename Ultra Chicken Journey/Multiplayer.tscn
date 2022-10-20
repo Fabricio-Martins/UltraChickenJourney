@@ -147,6 +147,7 @@ position = Vector2( 589, 864 )
 texture = ExtResource( 13 )
 
 [connection signal="scored" from="Player" to="." method="_on_Player_scored"]
+[connection signal="scored" from="Player2" to="." method="_on_Player2_scored"]
 [connection signal="timeout" from="Timer_Fast_Road" to="." method="_on_Timer_Fast_Road_timeout"]
 [connection signal="timeout" from="Timer_Slow_Road" to="." method="_on_Timer_Slow_Road_timeout"]
 [connection signal="pressed" from="CanvasLayer/RestartButton" to="." method="_on_RestartButton_pressed"]

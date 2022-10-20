@@ -52,8 +52,7 @@ func _on_Player_scored():
 		$Timer_Fast_Road.stop()
 		$Timer_Slow_Road.stop()
 
-
-func _on_Player2_scored2():
+func _on_Player2_scored():
 	if score_player_two < 5:
 		score_player_two += 1
 		$CanvasLayer/Scoreboard2.text = str(score_player_two)
