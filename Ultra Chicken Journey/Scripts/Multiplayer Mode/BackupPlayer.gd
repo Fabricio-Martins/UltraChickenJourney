@@ -1,29 +1,22 @@
 extends Area2D
 
-const ACCELERATION = 500
-const MAX_SPEED = 200
-const FRICTION = 500
-
+export var speed = 200
 var screen_size
 signal scored
 var colliding = false 
 var colliding_time = 0
 var pause = false
 
-var velocity = Vector2.ZERO
-
 func _ready():
 	screen_size = get_viewport_rect().size
 	
 func _process(delta):
-	var input_vector = Vector2.ZERO
-
 	if pause:
 		return
 	if colliding:
 		$AnimatedSprite.play()
 		colliding_time -= delta
-		position.y += MAX_SPEED * delta
+		position.y += speed * delta
 		if colliding_time <= 0:
 			colliding_time = 0
 			colliding = false
@@ -31,19 +24,18 @@ func _process(delta):
 			$AnimatedSprite.animation = "idle"
 		return
 	
-	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	input_vector = input_vector.normalized()
-	
-	if input_vector != Vector2.ZERO:
+	var velocity = Vector2()
+	if Input.is_action_pressed("ui_s"):
+		velocity.y += 1
+	if Input.is_action_pressed("ui_w"):
+		velocity.y -= 1
+	if velocity.length() > 0:
+		velocity = velocity.normalized() * speed
 		$AnimatedSprite.play()
-		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
-		print(velocity)
 	else:
 		$AnimatedSprite.stop()
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	position += velocity * delta
-		
+	
 	# Impede de sair da tela
 	position.y = clamp(position.y, 0, screen_size.y)
 	
@@ -53,12 +45,12 @@ func _process(delta):
 	elif velocity.y < 0:
 		$AnimatedSprite.animation = "backView"
 
-func _on_Player2_body_entered(body):
+func _on_Player_body_entered(body):
 	if colliding:
 		return
 		
 	if body.name == "victory":
-		emit_signal("scored2")
+		emit_signal("scored")
 		start_position()
 	else:
 		colliding = true

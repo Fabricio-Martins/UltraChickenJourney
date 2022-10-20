@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Themes/alterebro-pixel-font.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Multiplayer Mode/Multiplayer.gd" type="Script" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://Themes/hovered_button.tres" type="StyleBox" id=11]
 [ext_resource path="res://Soundtrack/ideiagalinha2.ogg" type="AudioStream" id=12]
 [ext_resource path="res://Sprites/icon.png" type="Texture" id=13]
+[ext_resource path="res://Scripts/Multiplayer Mode/PlayerOneExperimental.gd" type="Script" id=14]
+[ext_resource path="res://Scripts/Multiplayer Mode/PlayerTwoExperimental.gd" type="Script" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -46,10 +48,12 @@ collision_layer = 2
 [node name="Player" parent="." instance=ExtResource( 4 )]
 pause_mode = 1
 position = Vector2( 400, 696 )
+script = ExtResource( 14 )
 
 [node name="Player2" parent="." instance=ExtResource( 6 )]
 pause_mode = 1
 position = Vector2( 800, 696 )
+script = ExtResource( 15 )
 
 [node name="Timer_Fast_Road" type="Timer" parent="."]
 pause_mode = 1
@@ -143,7 +147,6 @@ position = Vector2( 589, 864 )
 texture = ExtResource( 13 )
 
 [connection signal="scored" from="Player" to="." method="_on_Player_scored"]
-[connection signal="scored2" from="Player2" to="." method="_on_Player2_scored2"]
 [connection signal="timeout" from="Timer_Fast_Road" to="." method="_on_Timer_Fast_Road_timeout"]
 [connection signal="timeout" from="Timer_Slow_Road" to="." method="_on_Timer_Slow_Road_timeout"]
 [connection signal="pressed" from="CanvasLayer/RestartButton" to="." method="_on_RestartButton_pressed"]
