@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Themes/alterebro-pixel-font.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Multiplayer Mode/Multiplayer.gd" type="Script" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://Themes/hovered_button.tres" type="StyleBox" id=11]
 [ext_resource path="res://Soundtrack/ideiagalinha2.ogg" type="AudioStream" id=12]
 [ext_resource path="res://Sprites/icon.png" type="Texture" id=13]
-[ext_resource path="res://Scripts/Multiplayer Mode/PlayerOneExperimental.gd" type="Script" id=14]
 [ext_resource path="res://Scripts/Multiplayer Mode/PlayerTwoExperimental.gd" type="Script" id=15]
 
 [sub_resource type="DynamicFont" id=1]
@@ -48,7 +47,6 @@ collision_layer = 2
 [node name="Player" parent="." instance=ExtResource( 4 )]
 pause_mode = 1
 position = Vector2( 400, 696 )
-script = ExtResource( 14 )
 
 [node name="Player2" parent="." instance=ExtResource( 6 )]
 pause_mode = 1

@@ -52,6 +52,11 @@ func _process(delta):
 		$AnimatedSprite.animation = "frontView"
 	elif velocity.y < 0:
 		$AnimatedSprite.animation = "backView"
+		
+	if velocity.x > 0:
+		$AnimatedSprite.animation = "rightView"
+	elif velocity.x < 0:
+		$AnimatedSprite.animation = "leftView"
 
 func _on_Player_body_entered(body):
 	if colliding:

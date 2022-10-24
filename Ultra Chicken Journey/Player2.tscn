@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Sprites/Player Two Sprites/Chicken Back 2/ChickenBack_2_002.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Player Two Sprites/Chicken Back 2/ChickenBack_2_000.png" type="Texture" id=2]
@@ -9,6 +9,10 @@
 [ext_resource path="res://Sprites/Player Two Sprites/Chicken Front 2/Chicken_2_000png1.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Player Two Sprites/Chicken Front 2/Chicken_2_000png2.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Player Two Sprites/Chicken Fly 2/ChickenFly_2_001.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Player Two Sprites/Chicken Right 2/ChickenRight_2_000.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Player Two Sprites/Chicken Right 2/ChickenRight_2_001.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Player Two Sprites/Chicken Left 2/ChickenLeft_2_001.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Player Two Sprites/Chicken Left 2/ChickenLeft_2_000.png" type="Texture" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -31,6 +35,16 @@ animations = [ {
 "loop": true,
 "name": "knockback",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "leftView",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "rightView",
+"speed": 5.0
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
@@ -42,7 +56,7 @@ script = ExtResource( 6 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 1 )
-animation = "idle"
+animation = "backView"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -2, 4 )
