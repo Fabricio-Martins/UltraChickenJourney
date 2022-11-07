@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "PowerUp",
+"language": "GDScript",
+"path": "res://Scripts/Power Ups/PowerUp.gd"
+} ]
+_global_script_class_icons={
+"PowerUp": ""
+}
+
 [application]
 
 config/name="Freeway"
