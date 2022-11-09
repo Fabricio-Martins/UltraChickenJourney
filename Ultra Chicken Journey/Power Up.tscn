@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://PowerUpSprite.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Power Ups/PowerUpSprite.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Speed Up/vloecidad_02.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Speed Up/vloecidad_04.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Speed Up/vloecidad_00.png" type="Texture" id=4]
@@ -8,7 +8,7 @@
 [ext_resource path="res://Sprites/Speed Up/vloecidad_01.png" type="Texture" id=6]
 [ext_resource path="res://Scripts/Power Ups/SpeedUp.tres" type="Resource" id=7]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 3 ) ],
 "loop": true,
@@ -20,7 +20,7 @@ animations = [ {
 
 [node name="Power Up" type="AnimatedSprite"]
 scale = Vector2( 0.3, 0.3 )
-frames = SubResource( 1 )
+frames = SubResource( 6 )
 frame = 2
 playing = true
 script = ExtResource( 1 )
