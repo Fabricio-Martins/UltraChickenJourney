@@ -1,7 +1,7 @@
 extends Area2D
 
 const ACCELERATION = 500
-const MAX_SPEED = 200
+var MAX_SPEED = 200
 const FRICTION = 500
 
 var screen_size

@@ -138,7 +138,6 @@ visible = false
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )
 autoplay = true
-stream_paused = true
 
 [node name="Icon" type="Sprite" parent="."]
 position = Vector2( 589, 864 )
