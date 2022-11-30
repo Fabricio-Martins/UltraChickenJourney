@@ -69,7 +69,7 @@ script = ExtResource( 5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 3 )
-animation = "backView"
+animation = "leftView"
 frame = 1
 playing = true
 
